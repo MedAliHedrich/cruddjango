@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html">
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>Acceuil</title>
+</head>
+
+<body>
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <div class="col-md-3 mb-2 mb-md-0">
+  
+    </div>
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="#" class="nav-link px-2 ">Acceuil</a></li>
+      <li><a href="/magasin/prod" class="nav-link px-2">Magasin</a></li>
+      <li><a href="#" class="nav-link px-2">About</a></li>
+    </ul>
+            <div class="col-md-3 text-end">
+              {% if user.is_authenticated %}
+              <button type="button" class="btn btn-outline-primary me-2"><a class="nav-link" href='/magasin/adminPanelAc/'>{{user}}</a></button>
+              
+              <button type="button" class="btn btn-outline-primary me-2 "><a class="nav-link" href="{% url 'logout' %}">Déconnexion</a></button>
+              {% else %}
+                  
+              <button type="button" class="btn btn-outline-primary me-2"><a class="nav-link" href="{% url 'login' %}">Connexion</a></button>
+                  
+                  
+              <button type="button" class="btn btn-outline-primary me-2"><a class="nav-link" href="{% url 'register' %}">Inscription</a></button>
+                
+              {% endif %}
+              </div>
+            </header>
+        
+    {% block content %} {% endblock %}
+
+</body>
+<div class="container">
+  <footer class="py-5">
+    <div class="row">
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>
+      
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>
+      </div>
+
+
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <ul class="nav flex-column">
+          <h5>Section</h5>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>
+      </div>
+    </div>
+
+   
+      <p>© 2023 Company, Inc. All rights reserved.</p>
+      </div>
+  </footer>
+</div>
+</html>
+
+

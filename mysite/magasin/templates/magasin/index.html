@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Members</h1>
+  
+<ul>
+  {% for x in myproducts %}
+    <li>{{ x.libelle }} </li>
+    
+    <li>{{ x.desciption }} </li>
+    <li>{{ x.prix }} </li>
+    <li>{{ x.type }} </li>
+    <li>{{ x.img }} </li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>   

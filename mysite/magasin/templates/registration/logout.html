@@ -1,0 +1,7 @@
+{% load bootstrap5 %}
+{% bootstrap_css %}  
+{% bootstrap_javascript %}
+{% block content %}
+<h2>Vous êtes déconnecté. </h2>
+<a href="{% url 'login' %}">Se reconnecter</a>
+{% endblock %}

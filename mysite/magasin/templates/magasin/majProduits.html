@@ -1,0 +1,12 @@
+{% extends 'magasin/adminPanel.html' %}
+{% block content %}
+ <div class="col-md-12 text-center">
+ <h2>Manip Produit ...... </h2>
+ </div>
+ <div class='modal-body py-6'>
+ <form method='POST' class="post-form">
+ {% csrf_token %}
+ {{form.as_p}}
+ <button type="submit" class="btn btn-primary">Enregistrer</button>
+ </form></div>
+{% endblock %}

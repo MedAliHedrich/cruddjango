@@ -1,0 +1,25 @@
+{% extends 'magasin/adminPanel.html' %}
+{% load static %}
+{% block content %}
+<button type="button" class="btn btn-primary bg-white"><a href="/magasin/majP" class="nav-link ">Ajouter</a></button>
+<table class="table table-hover">
+    <thead>
+        <tr>
+          <th scope="col">nom Prduit</th>
+          <th scope="col">prix produit</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for article in list %}
+        <tr>
+          <th>{{article.libelle}} </th>
+          <td>{{article.prix}} DT</td>
+          <td><button type="button" class="btn btn-warning">Edit</button></td>
+          <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'magasin/adminPanel.html' %}
+{% load static %}
+{% block content %}
+<button type="button" class="btn btn-primary bg-white"><a href="/magasin/AjoutCom" class="nav-link px-2">Ajouter</a></button>
+<table class="table table-hover">
+    <thead>
+        <tr>
+          <th scope="col">Date Commande </th>
+          <th scope="col">Total</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in list %}
+        <tr>
+          <th>{{c.DateCde}} </th>
+          <td>{{c.totalCde}} DT</td>
+          <td><button type="button" class="btn btn-warning">Edit</button></td>
+          <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+</table>
+{% endblock %}
